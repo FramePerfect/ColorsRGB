@@ -1,3 +1,11 @@
+// name: Austin Waldfogel
+// date:09/25/2024
+// desc: color picker that uses sliders to select color
+
+
+
+
+
 package com.example.colorsrgb;
 
 import android.graphics.Color;
@@ -62,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         listOfColors = new ArrayList<ColorInfo>();
 
-        resetValues();
+        resetValues(); //sets values to default
         fillListView();
     }
     private void addNewColorButtonListener() {
@@ -191,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
         lbl_hex_dyn.setText(rgbToHex(0,0,0).toUpperCase());
         setBgColor();
     }
-    private void setTxtColors(int c){
+    private void setTxtColors(int c){ //theres probably a better way to do this using themes or styles
         lbl_hex_dyn.setTextColor(c);
         lbl_red_dyn.setTextColor(c);
         lbl_green_dyn.setTextColor(c);
